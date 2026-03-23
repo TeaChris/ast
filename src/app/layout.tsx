@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
-import { Comfortaa } from 'next/font/google'
+import { Comfortaa, Geist } from 'next/font/google'
 import './globals.css'
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const comfortaa = Comfortaa({
       preload: true,
@@ -24,7 +27,7 @@ export default function RootLayout({
       return (
             <html
                   lang="en"
-                  className={`${comfortaa.variable} h-full antialiased`}
+                  className={cn("h-full", "antialiased", comfortaa.variable, "font-sans", geist.variable)}
             >
                   <body className="min-h-full flex flex-col">{children}</body>
             </html>
