@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMotionValue, useSpring, useInView } from 'framer-motion'
+import { motion, useMotionValue, useSpring, useInView, Variants } from 'framer-motion'
 import { useRef, useEffect } from 'react'
 
 const Orb = ({
@@ -58,12 +58,12 @@ const Orb = ({
   )
 }
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.14, delayChildren: 0.4 } },
 }
 
-const line = {
+const line: Variants = {
   hidden: { opacity: 0, y: 32, filter: 'blur(6px)' },
   show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } },
 }
