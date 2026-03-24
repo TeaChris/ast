@@ -121,7 +121,7 @@ export default function HeroSection() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center gap-4"
         >
-          <MagneticButton href="#get-started" variant="gold" size="lg">
+          <MagneticButton href="/sign-up" variant="gold" size="lg">
             Start Scheduling Free
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
