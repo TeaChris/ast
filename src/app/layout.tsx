@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Comfortaa, Geist } from 'next/font/google'
 import './globals.css'
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' })
 
 const comfortaa = Comfortaa({
       preload: true,
@@ -15,9 +15,12 @@ const comfortaa = Comfortaa({
 })
 
 export const metadata: Metadata = {
+      icons: {
+            icon: '/icon.svg',
+      },
       title: 'Aura — Premium Appointment Scheduling',
       description:
-        'Aura is a premium, intelligent appointment scheduling platform for elite concierge service businesses. Eliminate no-shows, automate reminders, and delight your clients.',
+            'Aura is a premium, intelligent appointment scheduling platform for elite concierge service businesses. Eliminate no-shows, automate reminders, and delight your clients.',
 }
 
 export default function RootLayout({
@@ -28,7 +31,13 @@ export default function RootLayout({
       return (
             <html
                   lang="en"
-                  className={cn("h-full", "antialiased", comfortaa.variable, "font-sans", geist.variable)}
+                  className={cn(
+                        'h-full',
+                        'antialiased',
+                        comfortaa.variable,
+                        'font-sans',
+                        geist.variable,
+                  )}
             >
                   <body className="min-h-full flex flex-col">{children}</body>
             </html>
