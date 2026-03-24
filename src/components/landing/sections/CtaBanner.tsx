@@ -83,7 +83,7 @@ export default function CtaBanner() {
 
         <ScrollReveal delay={0.3}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <MagneticButton href="#get-started" variant="gold" size="lg">
+            <MagneticButton href="/sign-up" variant="gold" size="lg">
               Start Free — 14 Days
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
