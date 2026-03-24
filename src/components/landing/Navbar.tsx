@@ -89,7 +89,7 @@ export default function Navbar() {
       {/* CTA */}
       <div className="flex items-center gap-3">
         <motion.a
-          href="#signin"
+          href="/sign-in"
           className="hidden md:block text-sm tracking-wider transition-colors duration-200"
           style={{
             color: 'var(--text-secondary)',
@@ -99,7 +99,7 @@ export default function Navbar() {
         >
           Sign In
         </motion.a>
-        <MagneticButton href="#get-started" variant="gold" size="sm">
+        <MagneticButton href="/sign-up" variant="gold" size="sm">
           Get Started
         </MagneticButton>
       </div>
