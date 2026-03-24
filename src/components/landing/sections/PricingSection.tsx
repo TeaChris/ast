@@ -204,6 +204,7 @@ export default function PricingSection() {
                 </ul>
 
                 <MagneticButton
+                  href={plan.name === 'Enterprise' ? 'mailto:sales@ouraura.com' : '/sign-up'}
                   variant={plan.featured ? 'gold' : 'outline'}
                   size="md"
                   className="w-full justify-center"
