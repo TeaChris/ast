@@ -19,6 +19,7 @@ export default function ServiceSummary({ service }: { service: Service }) {
                               <Image
                                     src={service.image}
                                     alt={service.name}
+                                    fill
                                     className="w-full h-full object-cover"
                               />
                               <div className="absolute inset-0 bg-linear-to-t from-obsidian/80 to-transparent" />
