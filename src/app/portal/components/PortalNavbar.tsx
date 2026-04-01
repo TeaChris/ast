@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, User, Calendar, Search } from 'lucide-react';
+import { Bell, User, Calendar, Search, LayoutGrid } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { usePortalStore } from '@/lib/store/usePortalStore';
 
@@ -44,6 +44,12 @@ export default function PortalNavbar() {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-8 bg-gold-dim/5 px-6 py-2 rounded-full border border-gold/10 backdrop-blur-md">
+          <NavLink 
+            isActive={currentView === 'dashboard'} 
+            onClick={() => setView('dashboard')}
+            icon={<LayoutGrid size={18} />}
+            label="Overview"
+          />
           <NavLink 
             isActive={currentView === 'discovery'} 
             onClick={() => setView('discovery')}
