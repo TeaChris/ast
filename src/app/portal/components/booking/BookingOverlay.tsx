@@ -41,7 +41,7 @@ export default function BookingOverlay() {
               <span className="text-gold/60 uppercase tracking-[0.2em] text-xs font-bold mb-4 block">
                 Booking Step {step} of 3
               </span>
-              <h2 className="text-5xl font-serif text-cream mb-12">
+              <h2 className="text-5xl font-comfortaa text-cream mb-12">
                 Select Your <span className="italic text-gold">Sacred Moment</span>
               </h2>
 
