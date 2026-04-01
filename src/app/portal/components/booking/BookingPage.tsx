@@ -1,10 +1,27 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import { ChevronLeft, ChevronDown } from 'lucide-react'
+import { ChevronLeft } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Calendar from './Calendar'
+import CustomSelect from './CustomSelect'
+
+const APPOINTMENT_TYPES = [
+  'Academic Advising',
+  'Career Counseling',
+  'Math Tutoring',
+  'Financial Aid Sync',
+  'Study Abroad Info'
+]
+
+const STAFF_MEMBERS = [
+  'Dr. Sarah Johnson',
+  'Ms. Emily Chen',
+  'Prof. Michael Davis',
+  'Dr. Robert Wilson',
+  'Sarah Parker'
+]
 
 const TIME_SLOTS = [
   '9:00 AM', '9:30 AM',
@@ -19,6 +36,8 @@ const TIME_SLOTS = [
 const UNAVAILABLE_SLOTS = ['9:30 AM', '10:30 AM', '11:30 AM', '1:30 PM', '3:30 PM']
 
 export default function BookingPage() {
+  const [selectedType, setSelectedType] = useState('')
+  const [selectedStaff, setSelectedStaff] = useState('')
   return (
     <div className="space-y-12 font-comfortaa pb-32">
       {/* Page Header */}
@@ -46,35 +65,21 @@ export default function BookingPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-[#0B0E14]">Appointment Type</label>
-              <div className="relative group">
-                <select className="w-full h-14 pl-5 pr-12 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] text-[#6C757D] appearance-none focus:outline-none focus:border-[#ADB5BD] transition-all font-medium">
-                  <option>Select appointment type</option>
-                  <option>Academic Advising</option>
-                  <option>Career Counseling</option>
-                  <option>Math Tutoring</option>
-                </select>
-                <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#ADB5BD]">
-                  <ChevronDown size={20} />
-                </div>
-              </div>
-            </div>
+            <CustomSelect
+              label="Appointment Type"
+              placeholder="Select appointment type"
+              options={APPOINTMENT_TYPES}
+              value={selectedType}
+              onChange={setSelectedType}
+            />
 
-            <div className="space-y-2">
-              <label className="text-sm font-bold text-[#0B0E14]">Instructor/Staff Member</label>
-              <div className="relative group">
-                <select className="w-full h-14 pl-5 pr-12 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] text-[#6C757D] appearance-none focus:outline-none focus:border-[#ADB5BD] transition-all font-medium">
-                  <option>Select instructor or staff member</option>
-                  <option>Dr. Sarah Johnson</option>
-                  <option>Ms. Emily Chen</option>
-                  <option>Prof. Michael Davis</option>
-                </select>
-                <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#ADB5BD]">
-                  <ChevronDown size={20} />
-                </div>
-              </div>
-            </div>
+            <CustomSelect
+              label="Instructor/Staff Member"
+              placeholder="Select instructor or staff member"
+              options={STAFF_MEMBERS}
+              value={selectedStaff}
+              onChange={setSelectedStaff}
+            />
 
             <div className="space-y-2">
               <label className="text-sm font-bold text-[#0B0E14]">Additional Notes (Optional)</label>
