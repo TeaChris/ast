@@ -38,6 +38,7 @@ const UNAVAILABLE_SLOTS = ['9:30 AM', '10:30 AM', '11:30 AM', '1:30 PM', '3:30 P
 export default function BookingPage() {
   const [selectedType, setSelectedType] = useState('')
   const [selectedStaff, setSelectedStaff] = useState('')
+  
   return (
     <div className="space-y-12 font-comfortaa pb-32">
       {/* Page Header */}
