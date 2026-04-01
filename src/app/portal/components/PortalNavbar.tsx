@@ -93,7 +93,7 @@ export default function PortalNavbar() {
                   className="absolute top-full right-0 mt-4 w-80 bg-obsidian-surface/80 backdrop-blur-2xl border border-gold/20 rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden z-60"
                 >
                   <div className="p-6 border-b border-gold/10 flex justify-between items-center">
-                    <span className="font-serif text-lg text-gold">Notifications</span>
+                    <span className="font-comfortaa text-lg text-gold">Notifications</span>
                     <span className="text-[10px] uppercase tracking-widest text-gold/40 font-bold">2 New</span>
                   </div>
                   <div className="max-h-96 overflow-y-auto no-scrollbar">
