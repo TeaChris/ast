@@ -175,7 +175,7 @@ function ActivityCard({ item, index }: { item: HistoryItem; index: number }) {
                                     <div className="flex justify-between items-start mb-4">
                                           <h4
                                                 className={cn(
-                                                      'text-2xl font-serif',
+                                                      'text-2xl font-comfortaa',
                                                       item.status === 'Upcoming'
                                                             ? 'text-cream'
                                                             : 'text-cream/70',
@@ -277,7 +277,7 @@ function EmptyState() {
                               className="absolute inset-0 border border-gold/5 rounded-[40px]"
                         />
                   </div>
-                  <h3 className="text-3xl font-serif text-cream mb-4">
+                  <h3 className="text-3xl font-comfortaa text-cream mb-4">
                         No Previous Aura Found
                   </h3>
                   <p className="text-cream/40 text-sm max-w-sm mb-12 font-light leading-relaxed">
