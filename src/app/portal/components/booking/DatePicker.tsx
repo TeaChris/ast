@@ -56,9 +56,9 @@ export default function DatePicker() {
   return (
     <div className="bg-obsidian-surface/40 border border-gold/10 p-8 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-5xl font-comfortaa text-cream mb-12">
+        <h3 className="text-xl font-comfortaa text-cream">
           {monthName} <span className="italic text-gold/60">{year}</span>
-        </h2>
+        </h3>
         <div className="flex gap-2">
           <button 
             onClick={() => setCurrentMonth(new Date(year, month - 1))}
