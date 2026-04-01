@@ -1,6 +1,8 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { 
   LayoutDashboard, 
   PlusCircle, 
@@ -9,14 +11,13 @@ import {
   User
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { usePortalStore } from '@/lib/store/usePortalStore'
 
 const NAV_LINKS = [
-  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { id: 'book', label: 'Book Appointment', icon: PlusCircle },
-  { id: 'calendar', label: 'Calendar', icon: Calendar },
-  { id: 'history', label: 'My Appointments', icon: ListOrdered },
-  { id: 'profile', label: 'Profile', icon: User },
+  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, href: '/portal' },
+  { id: 'book', label: 'Book Appointment', icon: PlusCircle, href: '/portal/book' },
+  { id: 'calendar', label: 'Calendar', icon: Calendar, href: '/portal/calendar' },
+  { id: 'history', label: 'My Appointments', icon: ListOrdered, href: '/portal/history' },
+  { id: 'profile', label: 'Profile', icon: User, href: '/portal/profile' },
 ]
 
 const QUICK_STATS = [
@@ -26,26 +27,18 @@ const QUICK_STATS = [
 ]
 
 export default function Sidebar() {
-  const { currentView, setView } = usePortalStore()
+  const pathname = usePathname()
 
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-[280px] bg-white text-[#0B0E14] flex flex-col p-6 z-50 overflow-y-auto no-scrollbar border-r border-[#E9ECEF] font-comfortaa">
-      {/* Brand */}
-      <div className="flex items-center gap-3 px-2 mb-10">
-        <div className="w-8 h-8 bg-[#0B0E14] rounded-lg flex items-center justify-center">
-          <div className="w-4 h-4 border-2 border-white rounded-[2px]" />
-        </div>
-        <span className="font-bold text-lg tracking-tight text-[#0B0E14]">Dashboard</span>
-      </div>
-
+    <aside className="fixed left-0 top-16 bottom-0 w-[280px] bg-white text-[#0B0E14] flex flex-col p-6 z-40 overflow-y-auto no-scrollbar border-r border-[#E9ECEF] font-comfortaa">
       {/* Primary Navigation */}
       <nav className="flex-1 space-y-1">
         {NAV_LINKS.map((link) => {
-          const isActive = currentView === link.id || (link.id === 'dashboard' && currentView === 'dashboard')
+          const isActive = pathname === link.href
           return (
-            <button
+            <Link
               key={link.id}
-              onClick={() => setView(link.id as 'dashboard' | 'discovery' | 'history')}
+              href={link.href}
               className={cn(
                 "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200",
                 isActive 
@@ -55,7 +48,7 @@ export default function Sidebar() {
             >
               <link.icon size={20} className={cn(isActive ? "text-white" : "text-[#ADB5BD]")} />
               <span className="text-sm">{link.label}</span>
-            </button>
+            </Link>
           )
         })}
       </nav>
