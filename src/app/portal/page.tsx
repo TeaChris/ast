@@ -14,8 +14,7 @@ export default function PortalPage() {
 
   return (
     <div className="min-h-screen flex flex-col mb-24 overflow-hidden">
-      {/* Global Portal Header */}
-      <PortalHeader />
+
 
       {/* Main View Transition */}
       <AnimatePresence mode="wait">
