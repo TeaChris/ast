@@ -4,10 +4,6 @@ import React from 'react'
 import { 
   Calendar, 
   Clock, 
-  CheckCircle2, 
-  HelpCircle, 
-  ChevronRight, 
-  LayoutDashboard,
   User,
   AlertCircle,
   BookOpen,
@@ -75,7 +71,7 @@ const APPOINTMENTS = [
 
 export default function Dashboard() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 font-comfortaa">
       {/* Top Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
