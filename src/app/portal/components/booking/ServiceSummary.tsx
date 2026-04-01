@@ -25,7 +25,7 @@ export default function ServiceSummary({ service }: { service: Service }) {
                               <div className="absolute inset-0 bg-linear-to-t from-obsidian/80 to-transparent" />
                               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                                     <div>
-                                          <h4 className="text-2xl font-serif text-cream">
+                                          <h4 className="text-2xl font-comfortaa text-cream">
                                                 {service.name}
                                           </h4>
                                           <div className="flex items-center gap-2 text-gold/80 text-xs mt-1">
@@ -121,7 +121,7 @@ function DigitTumbler({
                               }}
                               className={
                                     isTotal
-                                          ? 'text-4xl font-serif text-gold'
+                                          ? 'text-4xl font-comfortaa text-gold'
                                           : 'text-xl font-light text-cream'
                               }
                         >
@@ -131,7 +131,7 @@ function DigitTumbler({
                   <span
                         className={
                               isTotal
-                                    ? 'text-4xl font-serif text-gold'
+                                    ? 'text-4xl font-comfortaa text-gold'
                                     : 'text-xl font-light text-cream'
                         }
                   >
