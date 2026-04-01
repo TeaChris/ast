@@ -161,10 +161,11 @@ function ActivityCard({ item, index }: { item: HistoryItem; index: number }) {
 
                   {/* Card Content */}
                   <div className="flex-1 flex flex-col md:flex-row gap-8">
-                        <div className="w-full md:w-48 h-48 rounded-[32px] overflow-hidden border border-white/5 shadow-2xl">
+                        <div className="w-full md:w-48 h-48 rounded-[32px] overflow-hidden border border-white/5 shadow-2xl relative">
                               <Image
                                     src={item.image}
                                     alt={item.name}
+                                    fill
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                               />
                         </div>
