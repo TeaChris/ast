@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePortalStore } from '@/lib/store/usePortalStore';
-import PortalHeader from './components/PortalHeader';
 import ServiceDiscovery from './components/ServiceDiscovery';
 import BookingHistory from './components/history/BookingHistory';
 import Dashboard from './components/dashboard/Dashboard';
