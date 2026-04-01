@@ -39,7 +39,7 @@ export default function PortalNavbar() {
           <div className="w-8 h-8 rounded-full bg-gold flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.3)]">
             <span className="text-obsidian font-bold text-xs">A</span>
           </div>
-          <span className="font-serif text-xl tracking-widest text-gold uppercase hidden md:block">Aura</span>
+                    <span className="font-comfortaa text-lg text-gold">Notifications</span>
         </motion.div>
 
         {/* Navigation Links */}
