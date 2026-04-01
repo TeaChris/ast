@@ -29,7 +29,7 @@ export default function PortalHeader() {
             <span className="text-gold uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">
               The Digital Concierge
             </span>
-            <h1 className="text-5xl md:text-7xl font-serif text-cream leading-tight">
+            <h1 className="text-5xl md:text-7xl font-comfortaa text-cream leading-tight">
               Bonjour, <span className="italic text-gold">Alexander</span>
             </h1>
           </motion.div>
