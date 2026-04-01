@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import { Comfortaa, Geist, Cormorant_Garamond } from 'next/font/google'
+import { Comfortaa, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
-
-const geist = Geist({ subsets: ['latin'], variable: '--font-sans' })
 
 const comfortaa = Comfortaa({
       preload: true,
@@ -45,11 +43,12 @@ export default function RootLayout({
                         'antialiased',
                         comfortaa.variable,
                         cormorantGaramond.variable,
-                        'font-sans',
-                        geist.variable,
                   )}
             >
-                  <body className="min-h-full flex flex-col bg-background text-foreground animate-in fade-in duration-500">
+                  <body className={cn(
+                    "min-h-full flex flex-col bg-background text-foreground animate-in fade-in duration-500",
+                    comfortaa.className
+                  )}>
                         {children}
                   </body>
             </html>
