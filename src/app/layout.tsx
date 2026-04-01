@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Comfortaa, Geist } from 'next/font/google'
+import { Comfortaa, Geist, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 
@@ -12,6 +12,15 @@ const comfortaa = Comfortaa({
       fallback: ['sans-serif'],
       variable: '--font-comfortaa',
       weight: ['400', '500', '600', '700'],
+})
+
+const cormorantGaramond = Cormorant_Garamond({
+      preload: true,
+      display: 'swap',
+      subsets: ['latin'],
+      variable: '--font-serif',
+      weight: ['300', '400', '500', '600', '700'],
+      style: ['normal', 'italic'],
 })
 
 export const metadata: Metadata = {
@@ -35,11 +44,14 @@ export default function RootLayout({
                         'h-full',
                         'antialiased',
                         comfortaa.variable,
+                        cormorantGaramond.variable,
                         'font-sans',
                         geist.variable,
                   )}
             >
-                  <body className="min-h-full flex flex-col">{children}</body>
+                  <body className="min-h-full flex flex-col bg-background text-foreground animate-in fade-in duration-500">
+                        {children}
+                  </body>
             </html>
       )
 }
