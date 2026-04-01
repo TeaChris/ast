@@ -17,14 +17,14 @@ interface BookingState {
   selectedDate: Date | null;
   selectedTime: string | null;
   isBookingOpen: boolean;
-  currentView: 'discovery' | 'history';
+  currentView: 'dashboard' | 'discovery' | 'history';
   
   // Actions
   setService: (service: Service | null) => void;
   setDate: (date: Date | null) => void;
   setTime: (time: string | null) => void;
   setBookingOpen: (isOpen: boolean) => void;
-  setView: (view: 'discovery' | 'history') => void;
+  setView: (view: 'dashboard' | 'discovery' | 'history') => void;
 }
 
 export const usePortalStore = create<BookingState>((set) => ({
@@ -32,7 +32,7 @@ export const usePortalStore = create<BookingState>((set) => ({
   selectedDate: null,
   selectedTime: null,
   isBookingOpen: false,
-  currentView: 'discovery',
+  currentView: 'dashboard',
 
   setService: (service) => set({ selectedService: service }),
   setDate: (date) => set({ selectedDate: date }),
