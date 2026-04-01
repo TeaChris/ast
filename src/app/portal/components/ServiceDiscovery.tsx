@@ -188,7 +188,7 @@ function ServiceCard({ service, index, onBook }: ServiceCardProps) {
                               </div>
                         </div>
 
-                        <h3 className="text-3xl font-serif text-cream mb-2 group-hover:text-gold transition-colors duration-500">
+                        <h3 className="text-3xl font-sans text-cream mb-2 group-hover:text-gold transition-colors duration-500">
                               {service.name}
                         </h3>
 
